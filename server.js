@@ -41,9 +41,11 @@ let url = null;
     command.includes("what is the time?") ||
     command.includes("current time ")
 ) {
-    reply = `The current time is ${new Date().toLocaleTimeString("en-IN", {
-        hour: "numeric",
-        minute: "2-digit"
+    new Date().toLocaleTimeString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    hour: "numeric",
+    minute: "2-digit"
+})
     })}.`;
 }
     else if (command.includes("what is today's date?") || command.includes("today's date")) {
