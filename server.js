@@ -38,17 +38,15 @@ let url = null;
     }
 
     else if (
-    command.includes("what is the time?") ||
-    command.includes("current time ")
+    command.includes("what is the time") ||
+    command.includes("current time")
 ) {
-    new Date().toLocaleTimeString("en-IN", {
-    timeZone: "Asia/Kolkata",
-    hour: "numeric",
-    minute: "2-digit"
-})
+    reply = `The current time is ${new Date().toLocaleTimeString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour: "numeric",
+        minute: "2-digit"
     })}.`;
-}
-    else if (command.includes("what is today's date?") || command.includes("today's date")) {
+}    else if (command.includes("what is today's date?") || command.includes("today's date")) {
         const date = new Date();
         const day = date.getDate();
         const month = date.toLocaleString("en-IN", { month: "long" });
